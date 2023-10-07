@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 
   (async () => {
-    const browser = await puppeteer.launch({ args: ['--no-sandbox'] ,headless: true});
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] ,headless: true, executablePath: '/chrome-linux'});
     const page = await browser.newPage();
   
     await page.goto('https://developers.google.com/web/');
