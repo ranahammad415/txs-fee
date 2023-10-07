@@ -1,5 +1,5 @@
 const express = require('express');
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 
 const app = express();
  
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 
   (async () => {
-    const browser = await puppeteer.launch({ args: ['--no-sandbox'] ,headless: true, executablePath: '/chrome-linux'});
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] ,headless: true});
     const page = await browser.newPage();
   
     await page.goto('https://developers.google.com/web/');
