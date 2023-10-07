@@ -2,7 +2,10 @@
   "name": "txs-fee",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.js", 
+  "engines": {
+    "node": "18.14.2"
+  },
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache"
